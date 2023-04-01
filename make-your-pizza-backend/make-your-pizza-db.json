@@ -1,0 +1,95 @@
+{
+    "Ingredients": {
+      "flavors": [
+        {
+          "id": 1,
+          "type": "Calabresa"
+        },
+        {
+          "id": 2,
+          "type": "Muçarela"
+        },
+        {
+          "id": 3,
+          "type": "Napolitana"
+        },
+        {
+          "id": 4,
+          "type": "Portuguesa"
+        }
+      ],
+      "fillings": [
+        {
+          "id": 1,
+          "type": "Atum"
+        },
+        {
+          "id": 2,
+          "type": "Bacon"
+        },
+        {
+          "id": 3,
+          "type": "Carne moída"
+        },
+        {
+          "id": 4,
+          "type": "Frango"
+        }
+      ],
+      "optional": [
+        {
+          "id": 1,
+          "type": "Azeitona"
+        },
+        {
+          "id": 2,
+          "type": "Alcachofra"
+        },
+        {
+          "id": 3,
+          "type": "Brócolis"
+        },
+        {
+          "id": 4,
+          "type": "Cogumelos"
+        },
+        {
+          "id": 4,
+          "type": "Orégano"
+        },
+        {
+          "id": 4,
+          "type": "Queijo ralado"
+        }
+      ]
+    },
+    "status": [
+      {
+        "id": 1,
+        "type": "Solicitado"
+      },
+      {
+        "id": 2,
+        "type": "Em produção"
+      },
+      {
+        "id": 3,
+        "type": "Finalizado"
+      }
+    ],
+    "pizzas": [
+      {
+        "name": "Paulo Alves",
+        "fillings": "Bacon",
+        "flavors": "Calabresa",
+        "optional": [
+          "Azeitona",
+          "Orégano",
+          "Queijo ralado"
+        ],
+        "status": "Solicitado",
+        "id": 1
+      }
+      
+    ]
+  }
