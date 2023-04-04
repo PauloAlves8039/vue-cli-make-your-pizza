@@ -37,6 +37,6 @@ export default {
 <style scoped>
 .image-carousel {
     width: 100%;
-    height: 30rem;
+    height: 26rem;
 }
 </style>

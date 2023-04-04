@@ -1,6 +1,8 @@
 <template>
     <div class="footer bg-danger">
-        <p class="mt-3">Make Your Pizza &copy; {{ new Date().getFullYear() }}</p>
+        <p class="mt-1">
+            Make Your Pizza &copy; {{ new Date().getFullYear() }}
+        </p>
     </div>
 </template>
   
@@ -12,11 +14,13 @@ export default {
   
 <style scoped>
 .footer {
-    height: 50px;
+    border-top: 1px solid;
     color: #FFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    position: fixed;
     width: 100%;
 }
 </style>
