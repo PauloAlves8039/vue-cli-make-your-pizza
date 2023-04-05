@@ -1,11 +1,10 @@
 <template>
   <div class="home">
-    <h2 class="title-home">Make Your Pizza</h2>
     <div class="container">
       <Carousel />
       <Modal />
       <div class="div-modal">
-          <button type="button" class="btn btn-outline-primary mt-2 button-modal" data-bs-toggle="modal" data-bs-target="#modal-pizza">
+          <button type="button" class="btn btn-outline-success mt-2 button-modal" data-bs-toggle="modal" data-bs-target="#modal-pizza">
             <span class="button-text">
               Monte a Sua Pizza
             </span>
@@ -29,12 +28,6 @@ export default {
 </script>
 
 <style scoped>
-.title-home {
-  text-align: center;
-  color: #15B115;
-  font-weight: 700;
-}
-
 .div-modal {
   text-align: center;
 }

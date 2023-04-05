@@ -28,31 +28,31 @@
                     <div class="row mt-1">
                         <div class="col">
                             <div class="mb-2 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Frango</label>
+                                <input type="checkbox" class="form-check-input" id="chicken">
+                                <label class="form-check-label" for="chicken">Frango</label>
                             </div>
                             <div class="mb-2 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Azeitona</label>
+                                <input type="checkbox" class="form-check-input" id="olive">
+                                <label class="form-check-label" for="olive">Azeitona</label>
                             </div>
                             <div class="mb-2 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Alcachofra</label>
+                                <input type="checkbox" class="form-check-input" id="artichoke">
+                                <label class="form-check-label" for="artichoke">Alcachofra</label>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="mb-2 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck4">
-                                <label class="form-check-label" for="exampleCheck1">Brócolis</label>
+                                <input type="checkbox" class="form-check-input" id="broccoli">
+                                <label class="form-check-label" for="broccoli">Brócolis</label>
                             </div>
                             <div class="mb-2 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck5">
-                                <label class="form-check-label" for="exampleCheck1">Cogumelos</label>
+                                <input type="checkbox" class="form-check-input" id="mushrooms">
+                                <label class="form-check-label" for="mushrooms">Cogumelos</label>
                             </div>
                             <div class="mb-2 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck6">
-                                <label class="form-check-label" for="exampleCheck1">Orégano</label>
+                                <input type="checkbox" class="form-check-input" id="oregano">
+                                <label class="form-check-label" for="oregano">Orégano</label>
                             </div>
                         </div>
 
