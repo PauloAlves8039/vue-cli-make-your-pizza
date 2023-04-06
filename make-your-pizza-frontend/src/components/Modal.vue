@@ -13,12 +13,22 @@
                         <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                        <label for="name" class="form-label title-label">Escolha o Sabor</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                        <label for="name" class="form-label title-label">Selecione o Sabor</label>
+                        <select name="flavor" id="flavor" class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="flavor">One</option>
+                            <option value="flavor">Two</option>
+                            <option value="flavor">Three</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label title-label">Escolha o Recheio</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                        <select name="filling" id="filling" class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="filling">One</option>
+                            <option value="filling">Two</option>
+                            <option value="filling">Three</option>
+                        </select>
                     </div>
                     
                     <div>
@@ -59,8 +69,12 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-outline-success">Criar Minha Pizza</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-success">
+                        <i class="bi bi-check-lg"></i>
+                    </button>
                 </div>
             </div>
         </div>
