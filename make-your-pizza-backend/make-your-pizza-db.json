@@ -1,5 +1,5 @@
 {
-    "Ingredients": {
+    "ingredients": {
       "flavors": [
         {
           "id": 1,
@@ -59,7 +59,15 @@
         },
         {
           "id": 6,
-          "type": "Queijo ralado"
+          "type": "Manjericão"
+        },
+        {
+          "id": 7,
+          "type": "Queijo muçarela"
+        },
+        {
+          "id": 8,
+          "type": "Queijo parmesão"
         }
       ]
     },
