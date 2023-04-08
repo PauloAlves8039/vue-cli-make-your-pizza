@@ -1,13 +1,13 @@
 <template>
-    <div class="modal fade" id="modal-pizza" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+<div class="modal fade" id="modal-pizza" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form @submit="createPizza">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modal-title-label">Montagem de Pizza</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    
                     <div class="mb-1">
                         <label for="name" class="form-label title-label">Nome do Cliente</label>
                         <input type="text" class="form-control" id="name" name="name" v-model="name">
@@ -26,15 +26,15 @@
                             <option v-for="filling in fillings" :key="filling.id" :value="filling.type">{{ filling.type }}</option>
                         </select>
                     </div>
-                    
+                
                     <div>
                         <label class="title-label">Selecione os Opcionais</label>
                     </div>
-                    
+                
                     <div class="row mt-1 check-optional">
-                        <div class="col-sm-4 mb-2 form-check form-check-inline" v-for="optional in optionalData" :key="optional.id">
-                            <input type="checkbox" class="form-check-input" :value="optional.type">
-                            <span>{{ optional.type }}</span>
+                        <div class="col-sm-4 mb-2 form-check form-check-inline" v-for="option in optionalData" :key="option.id">
+                            <input type="checkbox" class="form-check-input" name="optional" v-model="optional" :value="option.type">
+                            <span>{{ option.type }}</span>
                         </div>
                     </div>
                 </div>
@@ -42,13 +42,14 @@
                     <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
                         <i class="bi bi-x-lg"></i>
                     </button>
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="submit" class="btn btn-outline-success">
                         <i class="bi bi-check-lg"></i>
                     </button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
+</div>
 </template>
   
 <script>
@@ -63,7 +64,6 @@ export default {
             flavor: null,
             filling: null,
             optional: [],
-            status: 'Solicitado',
             message: null
         }
     },
@@ -76,6 +76,28 @@ export default {
             this.flavors = data.flavors;
             this.fillings = data.fillings;
             this.optionalData = data.optional;
+        },
+        async createPizza(event) {
+            const urlPizza = "http://localhost:3001/pizzas";
+            event.preventDefault();
+            
+            const data = {
+                name: this.name,
+                flavor: this.flavor,
+                filling: this.filling,
+                optional: Array.from(this.optional),
+                status: 'Solicitado',
+            }
+
+            const dataJson = JSON.stringify(data);
+
+            const request = await fetch(urlPizza, {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: dataJson
+            });
+
+            const response = await request.json();
         }
     },
     mounted() {
