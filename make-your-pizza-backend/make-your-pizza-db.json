@@ -110,6 +110,19 @@
       ],
       "status": "Solicitado",
       "id": 2
+    },
+    {
+      "name": "Maria Clara",
+      "flavor": "Napolitana",
+      "filling": "Bacon",
+      "optional": [
+        "Azeitona",
+        "Brócolis",
+        "Cogumelos",
+        "Manjericão"
+      ],
+      "status": "Solicitado",
+      "id": 3
     }
   ]
 }

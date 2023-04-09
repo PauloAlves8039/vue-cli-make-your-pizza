@@ -98,6 +98,14 @@ export default {
             });
 
             const response = await request.json();
+
+            this.clearFields();
+        },
+        clearFields() {
+            this.name = "",
+            this.flavor = "",
+            this.filling = "",
+            this.optional = []
         }
     },
     mounted() {
