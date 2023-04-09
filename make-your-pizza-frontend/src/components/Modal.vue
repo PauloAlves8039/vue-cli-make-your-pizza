@@ -7,6 +7,7 @@
                     <h5 class="modal-title" id="modal-title-label">Montagem de Pizza</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <Message :message="message" v-show="message" />
                 <div class="modal-body">
                     <div class="mb-1">
                         <label for="name" class="form-label title-label">Nome do Cliente</label>
@@ -53,8 +54,13 @@
 </template>
   
 <script>
+import Message from '@/components/Message.vue';
+
 export default {
     name: "Modal",
+    components: {
+        Message
+    },
     data() {
         return {
             flavors: null,
@@ -99,7 +105,12 @@ export default {
 
             const response = await request.json();
 
+            this.addAlertMessage(response.id);
             this.clearFields();
+        },
+        addAlertMessage(value) {
+            this.message = `Pedido N° ${value} realizado com sucesso!`;
+            setTimeout(() => this.message = "", 4000);
         },
         clearFields() {
             this.name = "",
