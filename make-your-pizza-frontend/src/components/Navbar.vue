@@ -15,7 +15,7 @@
                         <router-link class="nav-link" aria-current="page" to="/">Início</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/about">Sobre</router-link>
+                        <router-link class="nav-link" to="/order">Pedido</router-link>
                     </li>
                 </ul>
             </div>
