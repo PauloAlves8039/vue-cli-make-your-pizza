@@ -1,31 +1,34 @@
 <template>
-    <table class="table mt-3">
+    <table class="table table-hover mt-3">
         <thead>
             <tr class="table-dark title-table">
-                <th>Códido do Pedido</th>
+                <th>Códido</th>
                 <th>Cliente</th>
                 <th>Sabor</th>
-                <th>Recheio(s)</th>
+                <th>Recheio</th>
                 <th>Opcionais</th>
-                <th>Ações</th>
+                <th>Atualziar Estado</th>
+                <th>Remover</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-table">
             <tr>
-                <td class="text-table"></td>
-                <td class="text-table"></td>
-                <td class="text-table"></td>
-                <td class="text-table"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>
                     <ul class="text-optional">
                         <li></li>
                     </ul>
                 </td>
-                <td class="text-table row">
-                    <select class="form-select form-select-sm col">
+                <td class="text-table select-state">
+                    <select class="form-select">
                         <option></option>
                     </select>
-                    <button class="btn btn-danger col ms-1">
+                </td>
+                <td>
+                    <button class="btn btn-outline-danger button-table">
                         <i class="bi bi-trash3-fill"></i>
                     </button>
                 </td>
@@ -46,10 +49,23 @@ export default {
 }
 
 .text-table {
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .text-optional {
-    font-size: 12px;
+    font-size: 13px;
+}
+
+.select-state {
+    margin-left: 15px;
+    width: 160px;
+}
+
+.button-table {
+    width: 100px;
+}
+
+li {
+    list-style: none;
 }
 </style>

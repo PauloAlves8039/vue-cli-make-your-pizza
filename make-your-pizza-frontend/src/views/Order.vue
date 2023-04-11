@@ -20,5 +20,7 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
+  color: #19A619;
+  font-weight: 600;
 }
 </style>
