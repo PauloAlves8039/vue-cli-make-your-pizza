@@ -1,5 +1,24 @@
 <template>
-  <div class="about">
-    <h1>Pedido</h1>
+  <div>
+    <div class="container">
+      <h1>Gerenciar pedidos</h1>
+      <Table />
+    </div>
   </div>
 </template>
+
+<script>
+import Table from "@/components/Table.vue";
+export default {
+  name: "Order",
+  components: {
+    Table
+  }
+}
+</script>
+
+<style scoped>
+h1 {
+  text-align: center;
+}
+</style>
