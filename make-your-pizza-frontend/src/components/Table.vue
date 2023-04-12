@@ -2,24 +2,26 @@
     <table class="table table-hover mt-3">
         <thead>
             <tr class="table-dark title-table">
-                <th>Códido</th>
+                <th>Pedido</th>
                 <th>Cliente</th>
                 <th>Sabor</th>
                 <th>Recheio</th>
                 <th>Opcionais</th>
-                <th>Atualziar Estado</th>
+                <th>Estado</th>
                 <th>Remover</th>
             </tr>
         </thead>
         <tbody class="text-table">
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr v-for="pizza in pizzas" :key="pizza.id">
+                <td>{{ pizza.id }}</td>
+                <td>{{ pizza.name }}</td>
+                <td>{{ pizza.flavor }}</td>
+                <td>{{ pizza.filling }}</td>
                 <td>
                     <ul class="text-optional">
-                        <li></li>
+                        <li v-for="(option, index) in pizza.optional" :key="index">
+                            {{ option }}
+                        </li>
                     </ul>
                 </td>
                 <td class="text-table select-state">
@@ -39,7 +41,28 @@
   
 <script>
 export default {
-    name: "Table"
+    name: "Table",
+    data() {
+        return {
+            pizzas: null,
+            pizzas_id: null,
+            status: [],
+            url: "http://localhost:3001"
+        }
+    },
+    methods: {
+        async getOrders() {
+            const request = await fetch(`${this.url}/pizzas`);
+            const data = await request.json();
+
+            this.pizzas = data;
+
+            console.log(this.pizzas);
+        }
+    },
+    mounted() {
+        this.getOrders();
+    }
 }
 </script>
   

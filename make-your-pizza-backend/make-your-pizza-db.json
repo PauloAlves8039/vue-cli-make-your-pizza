@@ -88,8 +88,8 @@
   "pizzas": [
     {
       "name": "Paulo Alves",
-      "fillings": "Bacon",
-      "flavors": "Calabresa",
+      "flavor": "Calabresa",
+      "filling": "Bacon",
       "optional": [
         "Azeitona",
         "Orégano",
@@ -101,7 +101,7 @@
     {
       "name": "Isadora Ferreira",
       "flavor": "Muçarela",
-      "filling": null,
+      "filling": "Atum",
       "optional": [
         "Azeitona",
         "Brócolis",
@@ -136,6 +136,18 @@
       ],
       "status": "Solicitado",
       "id": 4
+    },
+    {
+      "name": "Luciano Matias",
+      "flavor": "Napolitana",
+      "filling": "Carne moída",
+      "optional": [
+        "Azeitona",
+        "Orégano",
+        "Queijo parmesão"
+      ],
+      "status": "Solicitado",
+      "id": 5
     }
   ]
 }
