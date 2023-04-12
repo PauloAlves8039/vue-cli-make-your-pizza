@@ -26,7 +26,9 @@
                 </td>
                 <td class="text-table select-state">
                     <select class="form-select">
-                        <option></option>
+                        <option v-for="state in status" :key="state.id" value="state.type" :selected="pizza.status == state.type">
+                            {{ state.type }}
+                        </option>
                     </select>
                 </td>
                 <td>
@@ -57,7 +59,13 @@ export default {
 
             this.pizzas = data;
 
-            console.log(this.pizzas);
+            this.getStatus();
+        },
+        async getStatus() {
+            const request = await fetch(`${this.url}/status`);
+            const data = await request.json();
+
+            this.status = data;
         }
     },
     mounted() {
