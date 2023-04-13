@@ -32,7 +32,7 @@
                     </select>
                 </td>
                 <td>
-                    <button class="btn btn-outline-danger button-table">
+                    <button class="btn btn-outline-danger button-table" @click="deleteOrder(pizza.id)">
                         <i class="bi bi-trash3-fill"></i>
                     </button>
                 </td>
@@ -66,6 +66,12 @@ export default {
             const data = await request.json();
 
             this.status = data;
+        },
+        async deleteOrder(id) {
+            const request = await fetch(`${this.url}/pizzas/${id}`, {method: "DELETE"});
+            const response = await request.json();
+
+            this.getOrders();
         }
     },
     mounted() {
