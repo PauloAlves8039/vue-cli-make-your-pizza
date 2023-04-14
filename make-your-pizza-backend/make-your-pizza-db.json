@@ -95,7 +95,7 @@
         "Orégano",
         "Queijo ralado"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 1
     },
     {
@@ -134,7 +134,7 @@
         "Queijo muçarela",
         "Manjericão"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 4
     },
     {
@@ -146,7 +146,7 @@
         "Orégano",
         "Queijo parmesão"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 5
     }
   ]

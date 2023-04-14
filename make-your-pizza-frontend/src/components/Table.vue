@@ -25,8 +25,8 @@
                     </ul>
                 </td>
                 <td class="text-table select-state">
-                    <select class="form-select">
-                        <option v-for="state in status" :key="state.id" value="state.type" :selected="pizza.status == state.type">
+                    <select class="form-select" @change="updateOrder($event, pizza.id)">
+                        <option v-for="state in status" :key="state.id" :value="state.type" :selected="pizza.status == state.type">
                             {{ state.type }}
                         </option>
                     </select>
@@ -66,6 +66,19 @@ export default {
             const data = await request.json();
 
             this.status = data;
+        },
+        async updateOrder(event, id) {
+            const option = event.target.value;
+            const dataJson = JSON.stringify({ status:option });
+
+            const request = await fetch(`${this.url}/pizzas/${id}`, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: dataJson
+            });
+
+            const response = await request.json();
+
         },
         async deleteOrder(id) {
             const request = await fetch(`${this.url}/pizzas/${id}`, {method: "DELETE"});
