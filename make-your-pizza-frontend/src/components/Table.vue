@@ -1,4 +1,5 @@
 <template>
+    <Message :message="message" v-show="message" />
     <table class="table table-hover mt-3">
         <thead>
             <tr class="table-dark title-table">
@@ -42,13 +43,19 @@
 </template>
   
 <script>
+import Message from '@/components/Message.vue';
+
 export default {
     name: "Table",
+    components: {
+        Message
+    },
     data() {
         return {
             pizzas: null,
             pizzas_id: null,
             status: [],
+            message: null,
             url: "http://localhost:3001"
         }
     },
@@ -78,13 +85,23 @@ export default {
             });
 
             const response = await request.json();
+            this.alertSuccessMessage(response.id, response.status);
 
         },
         async deleteOrder(id) {
             const request = await fetch(`${this.url}/pizzas/${id}`, {method: "DELETE"});
             const response = await request.json();
 
+            this.alertDeleteMessage(id);
             this.getOrders();
+        },
+        alertSuccessMessage(value, state) {
+            this.message = `Pedido N° ${value} foi atualizado para ${state}!`;
+            setTimeout(() => this.message = "", 4000);
+        },
+        alertDeleteMessage(value) {
+            this.message = `Pedido N° ${value} foi removido!`;
+            setTimeout(() => this.message = "", 4000);
         }
     },
     mounted() {

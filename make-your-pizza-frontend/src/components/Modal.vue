@@ -105,10 +105,10 @@ export default {
 
             const response = await request.json();
 
-            this.addAlertMessage(response.id);
+            this.alertSuccessMessage(response.id);
             this.clearFields();
         },
-        addAlertMessage(value) {
+        alertSuccessMessage(value) {
             this.message = `Pedido N° ${value} realizado com sucesso!`;
             setTimeout(() => this.message = "", 4000);
         },
