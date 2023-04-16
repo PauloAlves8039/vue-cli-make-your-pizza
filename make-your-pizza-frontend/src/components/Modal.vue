@@ -40,11 +40,14 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
-                        <i class="bi bi-x-lg"></i>
+                    <button type="button" class="btn btn-outline-dark modal-button" title="Fechar" data-bs-dismiss="modal">
+                        <i class="bi bi-x-circle-fill modal-icon-button"></i>
                     </button>
-                    <button type="submit" class="btn btn-outline-success">
-                        <i class="bi bi-check-lg"></i>
+                    <button type="button" class="btn btn-outline-danger modal-button" title="Cancelar" @click="clearFields()">
+                        <i class="bi bi-eraser-fill modal-icon-button"></i>
+                    </button>
+                    <button type="submit" class="btn btn-outline-success modal-button" title="Salvar">
+                        <i class="bi bi-check-circle-fill modal-icon-button"></i>
                     </button>
                 </div>
             </div>
@@ -138,5 +141,18 @@ export default {
 
 .check-optional {
     margin-left: 0;
+}
+
+.modal-button {
+    width: 100px;
+    height: 40px;
+}
+
+.modal-icon-button {
+    font-size: 18px;
+}
+
+.modal-footer {
+    justify-content: center;
 }
 </style>
