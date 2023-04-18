@@ -148,6 +148,42 @@
       ],
       "status": "Finalizado",
       "id": 5
+    },
+    {
+      "name": "Karla Moreira",
+      "flavor": "Portuguesa",
+      "filling": "Carne moída",
+      "optional": [
+        "Azeitona",
+        "Orégano",
+        "Manjericão"
+      ],
+      "status": "Solicitado",
+      "id": 6
+    },
+    {
+      "name": "Rodrigo Rocha",
+      "flavor": "Napolitana",
+      "filling": "Frango",
+      "optional": [
+        "Brócolis",
+        "Queijo muçarela",
+        "Alcachofra"
+      ],
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "name": "Amanda Sancho",
+      "flavor": "Portuguesa",
+      "filling": "Bacon",
+      "optional": [
+        "Orégano",
+        "Manjericão",
+        "Cogumelos"
+      ],
+      "status": "Solicitado",
+      "id": 8
     }
   ]
 }

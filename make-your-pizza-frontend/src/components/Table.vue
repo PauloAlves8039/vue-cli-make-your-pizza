@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody class="text-table">
-            <tr v-for="pizza in pizzas" :key="pizza.id">
+            <tr v-for="pizza in pagedData" :key="pizza.id">
                 <td>{{ pizza.id }}</td>
                 <td>{{ pizza.name }}</td>
                 <td>{{ pizza.flavor }}</td>
@@ -40,22 +40,27 @@
           </tr>
         </tbody>
     </table>
+    <Pagination :inputData="pizzas" v-model:pagedData="pagedData" :elementsPerPage="elementsPerPage" />
 </template>
   
 <script>
 import Message from '@/components/Message.vue';
+import Pagination from '@/components/Pagination.vue';
 
 export default {
     name: "Table",
     components: {
-        Message
+        Message,
+        Pagination
     },
     data() {
         return {
-            pizzas: null,
+            pizzas: [],
             pizzas_id: null,
             status: [],
             message: null,
+            pagedData: [],
+            elementsPerPage: 5,
             url: "http://localhost:3001"
         }
     },
