@@ -25,13 +25,13 @@
 <script>
 export default {
     name: "Pagination",
-    emits: ["update:pagedData"],
+    emits: ["update:paginatedList"],
     props: {
-        inputData: {
+        receivedList: {
             type: Array,
             required: true
         },
-        pagedData: {
+        paginatedList: {
             type: Array,
             required: true
         },
@@ -53,19 +53,19 @@ export default {
     },
     computed: {
         totalPages() {
-            return Math.ceil(this.inputData.length / this.elementsPerPage);
+            return Math.ceil(this.receivedList.length / this.elementsPerPage);
         }
     },
     methods: {
         getDataPage(numberPage) {
             this.currentPage = parseInt(numberPage);
-            this.setPagedDate([]);
+            this.setPaginatedList([]);
 
             this.startPage = (numberPage * this.elementsPerPage) - this.elementsPerPage;
             this.endPage = (numberPage * this.elementsPerPage);
 
-            if (this.inputData) {
-                this.setPagedDate(this.inputData.slice(this.startPage, this.endPage));
+            if (this.receivedList) {
+                this.setPaginatedList(this.receivedList.slice(this.startPage, this.endPage));
             }
         },
         getPreviousPage() {
@@ -80,16 +80,16 @@ export default {
             }
             this.getDataPage(this.currentPage);
         },
-        setPagedDate(value) {
-            this.$emit("update:pagedData", value);
+        setPaginatedList(value) {
+            this.$emit("update:paginatedList", value);
         }
     },
     watch: {
-        pagedData(value) {
-            this.setPagedDate(value);
+        paginatedList(value) {
+            this.setPaginatedList(value);
         },
-        inputData(value) {
-            this.setPagedDate(value);
+        receivedList(value) {
+            this.setPaginatedList(value);
         }
     }
 }

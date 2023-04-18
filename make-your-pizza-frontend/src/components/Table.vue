@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody class="text-table">
-            <tr v-for="pizza in pagedData" :key="pizza.id">
+            <tr v-for="pizza in paginatedList" :key="pizza.id">
                 <td>{{ pizza.id }}</td>
                 <td>{{ pizza.name }}</td>
                 <td>{{ pizza.flavor }}</td>
@@ -40,7 +40,7 @@
           </tr>
         </tbody>
     </table>
-    <Pagination :inputData="pizzas" v-model:pagedData="pagedData" :elementsPerPage="elementsPerPage" />
+    <Pagination :receivedList="pizzas" v-model:paginatedList="paginatedList" :elementsPerPage="elementsPerPage" />
 </template>
   
 <script>
@@ -56,10 +56,10 @@ export default {
     data() {
         return {
             pizzas: [],
-            pizzas_id: null,
+            paginatedList: [],
             status: [],
-            message: null,
-            pagedData: [],
+            pizzas_id: null,
+            message: null,            
             elementsPerPage: 5,
             url: "http://localhost:3001"
         }
