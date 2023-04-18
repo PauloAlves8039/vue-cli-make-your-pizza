@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <router-link class="navbar-brand" to="/">
                 <img src="../assets/logo.png" alt="Logo" class="d-inline-block align-text-top logo">
-                <span class="title-page p-1">Make Your Pizza</span>
+                <span class="title-page p-1">Monte a Sua Pizza</span>
             </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

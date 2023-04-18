@@ -1,7 +1,7 @@
 <template>
     <div class="footer bg-danger">
         <p class="mt-1">
-            Make Your Pizza &copy; {{ new Date().getFullYear() }}
+            Monte a Sua Pizza &copy; {{ new Date().getFullYear() }}
         </p>
     </div>
 </template>

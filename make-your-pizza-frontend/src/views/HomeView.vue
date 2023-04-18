@@ -6,7 +6,8 @@
       <div class="div-modal">
           <button type="button" class="btn btn-outline-success mt-2 button-modal" data-bs-toggle="modal" data-bs-target="#modal-pizza">
             <span class="button-text">
-              Monte a Sua Pizza
+              Adicione seu pedido
+              <i class="bi bi-plus-circle"></i>
             </span>
           </button>
       </div>
