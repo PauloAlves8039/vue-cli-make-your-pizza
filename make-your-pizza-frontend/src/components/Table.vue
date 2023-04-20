@@ -66,36 +66,56 @@ export default {
     },
     methods: {
         async getOrders() {
-            const request = await fetch(`${this.url}/pizzas`);
-            const data = await request.json();
+            const request = await `${this.url}/pizzas`;
 
-            this.pizzas = data;
-
-            this.getStatus();
+            fetch(request)
+            .then(reponse => {
+                return reponse.json();
+            })
+            .then(data => {
+                this.pizzas = data;
+                this.getStatus();
+            })
+            .catch(error => console.error(error));
         },
         async getStatus() {
-            const request = await fetch(`${this.url}/status`);
-            const data = await request.json();
+            const request = await `${this.url}/status`;
 
-            this.status = data;
+            fetch(request)
+            .then(reponse => {
+                return reponse.json();
+            })
+            .then(data => {
+                this.status = data;
+            })
+            .catch(error => console.error(error));
         },
         async updateOrder(event, id) {
+            const request = await `${this.url}/pizzas/${id}`;
             const option = event.target.value;
             const dataJson = JSON.stringify({ status:option });
 
-            const request = await fetch(`${this.url}/pizzas/${id}`, {
+            fetch(request, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: dataJson
-            });
-
-            const response = await request.json();
-            this.alertSuccessMessage(response.id, response.status);
-
+            })
+            .then(response => response.json())
+            .then(data => {
+                this.alertSuccessMessage(data.id, data.status);
+            })
+            .catch(error => console.error(error));
         },
         async deleteOrder(id) {
-            const request = await fetch(`${this.url}/pizzas/${id}`, {method: "DELETE"});
-            const response = await request.json();
+            const request = await `${this.url}/pizzas/${id}`;
+
+            fetch(request, {
+                method: "DELETE",
+                headers: { "Content-Type": "application/json" }
+            }
+            )
+                .then(response => response.json())
+                .catch(error => console.error(error));
 
             this.alertDeleteMessage(id);
             this.getOrders();
