@@ -4,7 +4,7 @@
     <Pagination :receivedList="pizzas" v-model:paginatedList="paginatedList" :elementsPerPage="elementsPerPage" />
     <table class="table table-hover mt-3">
         <thead>
-            <tr class="table-dark title-table">
+            <tr class="title-table">
                 <th>Pedido</th>
                 <th>Cliente</th>
                 <th>Sabor</th>
@@ -29,13 +29,13 @@
                 </td>
                 <td class="text-table select-state">
                     <select class="form-select" @change="updateOrder($event, pizza.id)">
-                        <option v-for="state in status" :key="state.id" :value="state.type" :selected="pizza.status == state.type">
+                        <option v-for="state in status" :key="state.id" :value="state.type" :selected="pizza.status === state.type">
                             {{ state.type }}
                         </option>
                     </select>
                 </td>
                 <td>
-                    <button class="btn btn-outline-danger button-table" @click="deleteOrder(pizza.id)">
+                    <button class="btn btn-outline-danger button-table" @click="deleteOrder(pizza.id)" title="Remover">
                         <i class="bi bi-trash3-fill"></i>
                     </button>
                 </td>
@@ -139,6 +139,13 @@ export default {
 </script>
   
 <style scoped>
+@import '@/assets/css/colors.css';
+
+.title-table {
+    background-color: var(--var-system-color-success);
+    color: var(--var-system-color-white);
+}
+
 .title-table, .text-table {
     text-align: center;
 }
@@ -157,6 +164,16 @@ export default {
 }
 
 .button-table {
+    background-color: var(--var-system-color-white);
+    color: var(--var-system-color-delete);
+    border-color: var(--var-system-color-delete);
+    width: 100px;
+}
+
+.button-table:hover {
+    background-color: var(--var-system-color-delete);
+    color: var(--var-system-color-white);
+    border-color: var(--var-system-color-delete);
     width: 100px;
 }
 

@@ -40,13 +40,13 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark modal-button" title="Fechar" data-bs-dismiss="modal">
+                    <button type="button" class="btn modal-button-leave modal-button" title="Fechar" data-bs-dismiss="modal">
                         <i class="bi bi-x-circle-fill modal-icon-button"></i>
                     </button>
-                    <button type="button" class="btn btn-outline-danger modal-button" title="Cancelar" @click="clearFields()">
+                    <button type="button" class="btn modal-button-clean modal-button" title="Cancelar" @click="clearFields()">
                         <i class="bi bi-eraser-fill modal-icon-button"></i>
                     </button>
-                    <button type="submit" class="btn btn-outline-success modal-button" title="Salvar">
+                    <button type="submit" class="btn modal-button-save modal-button" title="Salvar">
                         <i class="bi bi-check-circle-fill modal-icon-button"></i>
                     </button>
                 </div>
@@ -129,9 +129,11 @@ export default {
 </script>
   
 <style scoped>
+@import '@/assets/css/colors.css';
+
 #modal-title-label {
     margin-left: auto;
-    color: #15B115;
+    color: var(--var-system-color-success);
     font-weight: 700;
 }
 
@@ -146,6 +148,42 @@ export default {
 .modal-button {
     width: 100px;
     height: 40px;
+}
+
+.modal-button-save {
+    background-color: var(--var-system-color-white);
+    color: var(--var-system-color-success);
+    border-color: var(--var-system-color-success);
+}
+
+.modal-button-save:hover {
+    background-color: var(--var-system-color-success);
+    color: var(--var-system-color-white);
+    border-color: var(--var-system-color-success);
+}
+
+.modal-button-clean {
+    background-color: var(--var-system-color-white);
+    color: var(--var-system-color-delete);
+    border-color: var(--var-system-color-delete);
+}
+
+.modal-button-clean:hover {
+    background-color: var(--var-system-color-delete);
+    color: var(--var-system-color-white);
+    border-color: var(--var-system-color-delete);
+}
+
+.modal-button-leave {
+    background-color: var(--var-system-color-white);
+    color: var(--var-system-color-closed);
+    border-color: var(--var-system-color-closed);
+}
+
+.modal-button-leave:hover {
+    background-color: var(--var-system-color-closed);
+    color: var(--var-system-color-white);
+    border-color: var(--var-system-color-closed);
 }
 
 .modal-icon-button {

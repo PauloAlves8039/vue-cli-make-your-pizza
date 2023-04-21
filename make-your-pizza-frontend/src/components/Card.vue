@@ -25,19 +25,21 @@ export default {
 </script>
   
 <style scoped>
+@import '@/assets/css/colors.css';
+
 .container-card {
     display: flex;
     justify-content: center;
 }
 
 .card-total {
-    background-color: #15B115;
+    background-color: var(--var-system-color-info);
     max-width: 16rem;
     max-height: 3rem;
 }
 
 .card-text {
-    color: #FFF;
+    color: var(--var-system-color-white);
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -45,6 +47,6 @@ export default {
 }
 
 .text-total {
-    font-weight: 800;
+    font-weight: 700;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-color">
         <div class="container-fluid">
             <router-link class="navbar-brand" to="/">
                 <img src="../assets/logo.png" alt="Logo" class="d-inline-block align-text-top logo">
@@ -31,6 +31,12 @@ export default {
 </script>
   
 <style scoped>
+@import '@/assets/css/colors.css';
+
+.navbar-color {
+    background-color: var(--var-system-color-delete);
+}
+
 .title-page {
     font-weight: 600;
 }
@@ -41,6 +47,6 @@ export default {
 }
 
 li{
-    font-weight: 600;
+    font-weight: 700;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="footer bg-danger">
+    <div class="footer footer-color">
         <p class="mt-1">
             Monte a Sua Pizza &copy; {{ new Date().getFullYear() }}
         </p>
@@ -13,6 +13,12 @@ export default {
 </script>
   
 <style scoped>
+@import '@/assets/css/colors.css';
+
+.footer-color {
+    background-color: var(--var-system-color-delete);
+}
+
 .footer {
     border-top: 1px solid;
     color: #FFF;
