@@ -1,5 +1,7 @@
 <template>
     <Message :message="message" v-show="message" />
+    <Card :total="pizzas.length" />
+    <Pagination :receivedList="pizzas" v-model:paginatedList="paginatedList" :elementsPerPage="elementsPerPage" />
     <table class="table table-hover mt-3">
         <thead>
             <tr class="table-dark title-table">
@@ -40,18 +42,19 @@
           </tr>
         </tbody>
     </table>
-    <Pagination :receivedList="pizzas" v-model:paginatedList="paginatedList" :elementsPerPage="elementsPerPage" />
 </template>
   
 <script>
 import Message from '@/components/Message.vue';
 import Pagination from '@/components/Pagination.vue';
+import Card from '@/components/Card.vue';
 
 export default {
     name: "Table",
     components: {
         Message,
-        Pagination
+        Pagination,
+        Card
     },
     data() {
         return {
