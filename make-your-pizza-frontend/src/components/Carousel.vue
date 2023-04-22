@@ -8,14 +8,26 @@
         </div>
 
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../assets/images/pizza1.jpg" alt="Pizza 1" class="d-block image-carousel">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="../assets/images/pizza1.jpg" alt="Pizza 1" class="d-block carousel-image">
+                <div class="carousel-caption d-none d-md-block carousel-text">
+                    <h5>Opções de Sabores</h5>
+                    <p>Escolha um sabor preferido para a sua pizza.</p>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="../assets/images/pizza2.jpg" alt="Pizza 2" class="d-block image-carousel">
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="../assets/images/pizza2.jpg" alt="Pizza 2" class="d-block carousel-image">
+                <div class="carousel-caption d-none d-md-block carousel-text">
+                    <h5>Montagem de pizza</h5>
+                    <p>Selecione a forma como deseja montar sua pizza.</p>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="../assets/images/pizza3.jpg" alt="Pizza 3" class="d-block image-carousel">
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="../assets/images/pizza3.jpg" alt="Pizza 3" class="d-block carousel-image">
+                <div class="carousel-caption d-none d-md-block carousel-text">
+                    <h5>Recheios extras</h5>
+                    <p>Adicione ingredientes extras a sua pizza montada.</p>
+                </div>
             </div>
         </div>
 
@@ -35,8 +47,15 @@ export default {
 </script>
   
 <style scoped>
-.image-carousel {
+@import '@/assets/css/colors.css';
+
+.carousel-image {
     width: 100%;
     height: 26rem;
+}
+
+.carousel-text {
+    text-shadow: 0.2em 0.2em 0.2em var(--var-system-color-black);
+    font-weight: 600;
 }
 </style>
