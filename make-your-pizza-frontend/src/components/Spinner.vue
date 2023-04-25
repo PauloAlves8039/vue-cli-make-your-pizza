@@ -20,6 +20,9 @@ export default {
 }
 </script>
 <style scoped>
+@import '@/assets/css/colors.css';
+@import '@/assets/css/animation.css';
+
 .spinner-body {
     display: flex;
     justify-content: center;
@@ -30,7 +33,7 @@ export default {
     height: 100%;
     align-items: center;
     transition: all 0.2s;
-    opacity : 0.7;
+    opacity : 0.9;
     z-index: 9999;
     background-color: var(--var-system-color-black);
 }

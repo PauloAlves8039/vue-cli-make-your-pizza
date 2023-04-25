@@ -4,7 +4,7 @@
         <form @submit="createPizza">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title-label">Montagem de Pizza</h5>
+                    <h5 class="modal-title animation-2s" id="modal-title-label">Montagem de Pizza</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <Message :message="message" v-show="message" />
@@ -130,6 +130,7 @@ export default {
   
 <style scoped>
 @import '@/assets/css/colors.css';
+@import '@/assets/css/animation.css';
 
 #modal-title-label {
     margin-left: auto;

@@ -1,0 +1,9 @@
+.animation-2s {
+    animation: heartBeat;
+    animation-duration: 2s;
+}
+
+.animation-3s {
+    animation: heartBeat;
+    animation-duration: 3s;
+}

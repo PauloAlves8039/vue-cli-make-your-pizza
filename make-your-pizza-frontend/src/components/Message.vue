@@ -1,6 +1,6 @@
 <template>
     <div class="alert alert-success" role="alert">
-        <p class="text-message mb-1">{{ message }}</p>
+        <p class="text-message mb-1 animation-3s">{{ message }}</p>
     </div>
 </template>
   
@@ -14,6 +14,9 @@ export default {
 </script>
   
 <style scoped>
+@import '@/assets/css/colors.css';
+@import '@/assets/css/animation.css';
+
 .text-message {
     text-align: center;
     font-size: 17px;

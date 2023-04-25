@@ -2,7 +2,7 @@
     <div class="container-card row">
         <div class="card text-dark mb-3 col-8 card-total">
             <div class="card-body">
-                <p class="card-text">
+                <p class="card-text animation-3s">
                     Total de Pedidos:
                     <span class="text-total">{{ total }}</span>
                 </p>
@@ -26,6 +26,7 @@ export default {
   
 <style scoped>
 @import '@/assets/css/colors.css';
+@import '@/assets/css/animation.css';
 
 .container-card {
     display: flex;
