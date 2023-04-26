@@ -140,6 +140,7 @@ export default {
   
 <style scoped>
 @import '@/assets/css/colors.css';
+@import '@/assets/css/animation.css';
 
 .title-table {
     background-color: var(--var-system-color-success);
@@ -179,5 +180,109 @@ export default {
 
 li {
     list-style: none;
+}
+
+@media (max-width: 1200px) {
+    table thead tbody tr {
+        max-width: 900px;
+    }
+    
+    td {
+        max-width: 150px;
+    }
+
+    .text-table {
+        font-size: 15px;
+    }
+
+    .text-optional {
+        font-size: 12px;
+    }
+
+    .button-table {
+        width: 80px;
+    }
+
+    .button-table:hover {
+        width: 80px;
+    }
+}
+
+@media (max-width: 800px) {
+    table thead tbody tr {
+        max-width: 700px;
+    }
+
+    td {
+        max-width: 130px;
+    }
+
+    .text-table {
+        font-size: 14px;
+    }
+
+    .text-optional {
+        font-size: 11px;
+    }
+    
+    .button-table {
+        width: 70px;
+    }
+
+    .button-table:hover {
+        width: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    table thead tbody tr {
+        max-width: 500px;
+    }
+
+    td {
+        max-width: 110px;
+    }
+
+    .text-table {
+        font-size: 13px;
+    }
+
+    .text-optional {
+        font-size: 10px;
+    }
+
+    .button-table {
+        width: 60px;
+    }
+
+    .button-table:hover {
+        width: 60px;
+    }
+}
+
+@media (max-width: 400px) {
+    table thead tbody tr {
+        max-width: 300px;
+    }
+
+    td {
+        max-width: 90px;
+    }
+
+    .text-table {
+        font-size: 12px;
+    }
+
+    .text-optional {
+        font-size: 9px;
+    }
+
+    .button-table {
+        width: 50px;
+    }
+
+    .button-table:hover {
+        width: 50px;
+    }
 }
 </style>
