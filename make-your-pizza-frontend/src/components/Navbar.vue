@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-color">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-color col-12 col-md-12 col-xs-12">
         <div class="container-fluid">
             <router-link class="navbar-brand" to="/">
                 <img src="../assets/logo.png" alt="Logo" class="d-inline-block align-text-top logo">
