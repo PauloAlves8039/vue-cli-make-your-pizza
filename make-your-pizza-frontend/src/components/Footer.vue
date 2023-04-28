@@ -14,19 +14,5 @@ export default {
   
 <style scoped>
 @import '@/assets/css/colors.css';
-
-.footer-color {
-    background-color: var(--var-system-color-delete);
-}
-
-.footer {
-    border-top: 1px solid;
-    color: #FFF;
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    height: 35px;
-    position: fixed;
-    width: 100%;
-}
+@import '@/assets/css/footer.css';
 </style>

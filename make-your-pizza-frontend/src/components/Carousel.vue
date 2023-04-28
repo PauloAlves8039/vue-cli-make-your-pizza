@@ -48,14 +48,5 @@ export default {
   
 <style scoped>
 @import '@/assets/css/colors.css';
-
-.carousel-image {
-    width: 100%;
-    height: 26rem;
-}
-
-.carousel-text {
-    text-shadow: 0.2em 0.2em 0.2em var(--var-system-color-black);
-    font-weight: 600;
-}
+@import '@/assets/css/carousel.css';
 </style>

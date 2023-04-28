@@ -27,27 +27,5 @@ export default {
 <style scoped>
 @import '@/assets/css/colors.css';
 @import '@/assets/css/animation.css';
-
-.container-card {
-    display: flex;
-    justify-content: center;
-}
-
-.card-total {
-    background-color: var(--var-system-color-info);
-    max-width: 16rem;
-    max-height: 3rem;
-}
-
-.card-text {
-    color: var(--var-system-color-white);
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-    margin-top: -5px;
-}
-
-.text-total {
-    font-weight: 700;
-}
+@import '@/assets/css/card.css';
 </style>

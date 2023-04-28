@@ -28,40 +28,6 @@ export default {
 }
 </script>
 <style scoped>
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-}
-
-.contact-title {
-    text-align: center;
-}
-
-.contact-body {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-}
-
-.contact-color-whatsapp {
-    background-color: var(--var-system-color-success);
-    color: var(--var-system-color-white);
-}
-
-.contact-color-telephone {
-    background-color: var(--var-system-color-info);
-    color: var(--var-system-color-white);
-}
-
-.contact-color-instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    color: var(--var-system-color-white);
-}
-
-.contact-icon {
-    font-size: 32px;
-    margin-top: -5px;
-    margin-left: 10px;
-}
+@import '@/assets/css/colors.css';
+@import '@/assets/css/contact.css';
 </style>

@@ -15,11 +15,6 @@ export default {
   
 <style scoped>
 @import '@/assets/css/colors.css';
+@import '@/assets/css/message.css';
 @import '@/assets/css/animation.css';
-
-.text-message {
-    text-align: center;
-    font-size: 17px;
-    font-weight: 500;
-}
 </style>
