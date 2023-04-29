@@ -96,19 +96,21 @@ export default {
 </script>
   
 <style scoped>
+@import '@/assets/css/colors.css';
+
 .container-pagination {
     display: flex;
     justify-content: center;
 }
 
 .page-link {
-    background-color: #FFF;
-    color: #15B115;
+    background-color: var(--var-system-color-white);
+    color: var(--var-system-color-success);
 }
 
 .page-link:hover {
-    background-color: #15B115;
-    color: #FFF;
+    background-color: var(--var-system-color-success);
+    color: var(--var-system-color-white);
 }
 
 .iten-navigation {
