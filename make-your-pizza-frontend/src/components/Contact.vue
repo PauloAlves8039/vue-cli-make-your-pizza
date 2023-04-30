@@ -1,7 +1,4 @@
 <template>
-    <div class="py-2">
-        <h2 class="contact-title">Contatos</h2>
-    </div>
     <div class="container contact-container px-2 py-1" id="featured-3">
         <div class="row g-3 py-1 row-cols-1 row-cols-lg-3">
             <div class="feature col">
