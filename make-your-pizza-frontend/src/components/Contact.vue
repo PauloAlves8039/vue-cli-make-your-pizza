@@ -1,6 +1,6 @@
 <template>
     <div class="container contact-container px-2 py-1" id="featured-3">
-        <div class="row g-3 py-1 row-cols-1 row-cols-lg-3">
+        <div class="row g-3 py-1 row-cols-12 row-cols-lg-3">
             <div class="feature col">
             <div class="contact-body contact-color-whatsapp">
                 <i class="bi bi-whatsapp contact-icon"></i>
