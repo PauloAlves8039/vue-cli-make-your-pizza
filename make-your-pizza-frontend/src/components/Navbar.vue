@@ -17,6 +17,9 @@
                     <li class="nav-item">
                         <router-link class="nav-link" to="/order">Pedido</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/about">Sobre</router-link>
+                    </li>
                 </ul>
             </div>
         </div>
