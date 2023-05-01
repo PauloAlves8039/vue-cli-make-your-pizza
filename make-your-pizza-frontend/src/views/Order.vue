@@ -18,9 +18,11 @@ export default {
 </script>
 
 <style scoped>
+@import '@/assets/css/colors.css';
+
 h1 {
   text-align: center;
-  color: #19A619;
+  color: var(--var-system-color-success);
   font-weight: 600;
 }
 </style>
