@@ -134,12 +134,15 @@ export default {
 
 #modal-title-label {
     margin-left: auto;
-    color: var(--var-system-color-success);
     font-weight: 700;
+    font-size: 25px;
+    color: var(--var-system-color-success);
 }
 
 .title-label {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--var-system-color-success);
 }
 
 .check-optional {

@@ -3,7 +3,7 @@
         <div class="card">
             <h1 class="title-about">Monte sua Pizza</h1>
             <div class="card-body">
-                <h2>Objetivo</h2>
+                <h2 class="subtitle-about">Objetivo</h2>
                 <p>
                     Esse projeto foi desenvolvido para fins didáticos com intúito de praticar o desenvolvimento com Vue 3 consumindo uma API.
                 </p>
@@ -13,7 +13,7 @@
                     com a montagem dos pedidos das pizzas o usuário pode manipular o estado do pedido.
                 </p>
                 <hr>
-                <h3>Recursos Utilizados</h3>
+                <h3 class="subtitle-about">Recursos Utilizados</h3>
                 <ul>
                     <li>
                         <a href="https://cli.vuejs.org/" target="_blank" alt="Vue.js 3">Vue CLI</a> 
@@ -38,7 +38,7 @@
                     </li>
                 </ul>
                 <hr>
-                <h3>Contatos</h3>
+                <h3 class="subtitle-about">Contatos</h3>
                 <Contact />
             </div>
         </div>
@@ -64,7 +64,27 @@ export default {
     color: var(--var-system-color-success);
 }
 
+.subtitle-about {
+    color: var(--var-system-color-success);
+}
+
 .text-about {
     justify-content: justify;
 }
+
+a {
+    text-decoration: none;
+    color: var(--var-system-color-info);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--var-system-color-link);
+}
+
+li {
+    list-style: circle;
+    font-weight: 500;
+}
+
 </style>
